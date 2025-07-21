@@ -32,7 +32,7 @@ section#resume picture{
     height: 100 dvh;
 }  
 
-section#resume picture:hover{
+section#resume picture:has(:hover){
     animation: scale-up 0.5s ease-out forwards;
 }
 
@@ -106,8 +106,7 @@ nav ul li:hover a {
 
 nav ul li:hover {
     background-color: #f0f0f0;
-    font-weight: bold;
-    filter: drop-shadow(2mm 2mm 2mm rgb(160, 0, 210));
+    filter: drop-shadow(2mm 2mm 2mm color-mix(in srgb, purple 80%, magenta 20%))
 }
 
 div#profile-pic-pre {
