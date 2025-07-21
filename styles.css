@@ -1,0 +1,259 @@
+:root {
+    --bg-color: #07080e;
+    --text-color: #eeeef4;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("assets/Montserrat-Thin.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("assets/Montserrat-ThinItalic.ttf");
+    font-style: italic;
+}
+
+@keyframes scale-up {
+    from {
+      transform: scaleX(0.5);
+    }
+    to {
+      transform: scaleX(1);
+    }
+}
+
+section#resume picture{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100 dvw;
+    height: 100 dvh;
+}  
+
+section#resume picture:hover{
+    animation: scale-up 0.5s ease-out forwards;
+}
+
+body {
+    background-color: var(--bg-color, black);
+    color: var(--text-color, white);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+} 
+
+section {
+    padding: 2rem;
+}
+
+section[id] h2{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+
+hgroup#name-display-major{
+    display: block;
+    text-align: center;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+
+search#website-searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+
+    li {
+        margin: 0 1rem;
+        font-size: 1.5rem;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 0.5rem;
+        transition: background-color 0.3s ease;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: var(--text-color, white);
+        }
+
+    }
+}
+
+nav ul li:hover a {
+    color: black;
+}
+
+nav ul li:hover {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    filter: drop-shadow(2mm 2mm 2mm rgb(160, 0, 210));
+}
+
+div#profile-pic-pre {
+    display: flex;
+}
+
+pre {
+    margin: auto 0;
+    white-space: pre-wrap;
+    width: 80dvw;
+}
+
+a[href="#main-header"] {
+    display: flex;
+    color: var(--text-color, white);
+    align-content: center;
+    justify-content: center;
+}
+
+section#resume table#relevant-coursework {
+    background-color: grey;
+    color: black;
+    width: 100 dvw;
+    max-width: fit-content;
+    margin: auto;
+    
+    caption {
+        color: var(--text-color, white);
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+   th,td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid white;
+    }
+}
+
+
+download-content{
+    display: block;
+    padding: 1rem 0;
+}
+
+section#projects summary{
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+section#contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: auto;
+}
+
+section#contact input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+} 
+
+section#experiment iframe, video, canvas{
+    width: 80dvw; 
+    height: 45dvh;
+    object-fit: contain; 
+    margin: 0 auto;
+    padding: 0 auto;
+    display: block;
+}
+
+audio {
+    width: 70dvw; 
+    height: 12dvh;
+    object-fit: contain; 
+    margin: 1rem auto;
+    display: block
+}
+
+blockquote, wbr{
+    display: block;
+    text-align: center;
+}
+
+@media screen and (max-width: 1150px) {
+
+    nav ul {
+        grid-template-columns: repeat(3, auto);
+    }
+  
+    section#about-me input-group {
+        display: block;
+        gap: 5px; 
+    } 
+}
+
+@media screen and (max-width: 690px) {
+
+    body{
+        width: 100 dvw;
+    }
+
+    section{
+        padding: 0;
+    }
+
+    nav ul {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    nav ul li{
+        font-size: 1.2rem;
+    }
+
+    #profile-pic-pre {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center horizontally */
+        text-align: center; /* Ensures text inside is also centered */
+        width: 100%;
+
+        #profile-picture img {
+            border-radius: 50%; /* Makes the profile picture circular */
+            display: block; /* Removes default inline spacing */
+        }
+    }
+
+    section#about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#about-me input-group {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 3px;
+    }
+
+    footer section.subscribe form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } 
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Brianna A. Olivarez - Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Brianna A. Olivarez, a Math-CS student at UCSD.">
+    <link rel="icon" type="image/jpg" href="/images/smileyface.jpg">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header id="main-header">
+        <a href="index.html" target="_self">
+            <svg width="500" height="100" xmlns="http://www.w3.org/2000/svg">
+                
+                <circle r="45" cx="50" cy="50" fill="lightblue" />
+
+                <text x="50%" y="50%" font-family="cursive" font-size="30" fill="pink" text-anchor="middle" dominant-baseline="middle">
+                Welcome to my portfolio!
+                </text>
+                
+            </svg>
+        </a>
+        <hgroup id="name-display-major">
+            <h1>Brianna A. Olivarez</h1>
+            <p><strong>UCSD Math-CS Student</strong></p>
+        </hgroup>
+
+        <search id="website-searchbar">
+            <form action="index.html" method="get">
+              <label for="query">Search document:</label>
+              <input id="query" name="search-doc" type="search" required>
+              <button type="submit">Go!</button>
+            </form>
+        </search>
+
+        <nav>
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#resume">Resume/Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact Form</a></li>
+                <li><a href="#experiment">Experiment</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="about-me">
+            <h2>About Me</h2>
+
+            <div id="profile-pic-pre">
+            <figure id="profile-picture">
+                <img src="images/smileyface.jpg" alt="Brianna A. Olivarez's profile picture" width="200">
+                <figcaption>Profile Photo</figcaption>
+            </figure>
+            
+            <pre>I am currently a student getting ready to graduate! 
+<strong>Studying</strong> at <em>UCSD</em> for the past <b>four</b> years has been an <i>incredible</i> journey.
+
+Growing up in California, I've had the chance to experience diverse perspectives and embrace a dynamic lifestyle 
+that has shaped my ability to adapt and learn continuously.
+
+I'm passionate about continuous learning and growth. I’ve always embraced the value of diverse perspectives,
+which has helped shape the way I approach challenges and opportunities.                
+            </pre>
+            </div>
+            <aside>
+                <form action="/submit_form" method="post">
+                    <label for="know-more-of-me">What is something you'd like to know more about me?</label>
+                    <input-group>
+                        <input class="know-more-of-me" list="know-more-of-me-options" name="know-more-of-me" id="know-more-of-me" required>
+                        <button  type="submit">Submit</button>
+                    </input-group>
+                    <datalist id="know-more-of-me-options">
+                        <option value="Education">
+                        <option value="Projects">
+                        <option value="Work Experience">
+                        <option value="Hobbies">
+                        <option value="Skills">
+                        <option value="Interests">
+                        <option value="Favorite Books">
+                        <option value="Favorite Movies">
+                        <option value="Favorite Music">
+                        <option value="Favorite Foods">
+                    </datalist>
+
+                </form>
+            </aside>
+            
+            <br>
+            <a href="#main-header">Back to Top</a>
+        </section>
+        <hr>
+        <section id="resume">
+            <hgroup>
+                <h2>Resume/Education</h2>
+                <p><i>A Brief Intro of My Resume</i></p>
+            </hgroup>
+        
+        <p>As a student at UCSD, I have gained a strong foundation in computer science and mathematics. My coursework has
+                provided me with a solid understanding of algorithms, data structures, and software development principles. I
+                have also had the opportunity to work on various projects that have allowed me to apply my knowledge and
+                skills in practical settings.
+            </p>
+
+            <table id="relevant-coursework">
+                <caption>Relevant Coursework</caption>
+                <colgroup>
+                    <col span="2">
+                </colgroup>
+                <tr>
+                    <th>Course</th>
+                    <th>Focus Area</th>
+                </tr>
+                <tr>
+                    <td>Advanced Data Structures</td>
+                    <td>Efficient data storage & retrieval</td>
+                </tr>
+                <tr>
+                    <td>Algorithm Design</td>
+                    <td>Algorithm design & analysis, complexity</td>
+                </tr>
+                <tr>
+                    <td>Computer Org & Systems Design</td>
+                    <td>Low-level system architecture, C, Assembly</td>
+                </tr>
+                <tr>
+                    <td>Web Client Languages</td>
+                    <td>HTML+CSS+JavaScript fundamentals</td>
+                </tr>
+                <tr>
+                    <td>Software Engineering</td>
+                    <td>Development processes & best practices, Agile, React</td>
+                </tr>
+                
+            </table>
+
+            <dl>
+                <dt><strong>Skills:</strong></dt>
+                <dt><u>Technical:</u></dt> 
+                    <dd>C/C++, Java, Python, HTML, CSS, JavaScript, React, Agile methodologies</dd>
+                <dt><u>Soft:</u></dt>
+                    <dd>Team player, strong communication, problem-solving, adaptability</dd>
+                
+            </dl>
+            <dl>
+                <dt><strong>Education:</strong></dt>
+                <dt><u>University of California, San Diego</u></dt>
+                    <dd>Bachelor of Science in Mathematics-Computer Science</dd>
+            </dl>
+            
+            <a href="https://www.ucsd.edu/" target="_blank">
+                <picture>
+                    <source media="(min-width: 800px)" srcset="images/UCSD-Symbol-Big.png" >
+                    <img src="images/UCSD-Seal-Logo.png" alt="UCSD Logo" style="width: 350px; height: 200px;">
+                </picture>
+            </a>    
+           
+            <details>
+                <summary>View Resume</summary>
+                    <object data="assets/Brianna_Olivarez_Dec_Resume.pdf" type="application/pdf" width="600" height="800">
+                        <p>Unable to display PDF. <a href="assets/Brianna_Olivarez_Dec_Resume.pdf" download>Download it instead.</a></p>
+                    </object>
+            </details>
+
+            
+            <download-content data-content="Resume">Download my full resume <a href="assets/Brianna_Olivarez_Dec_Resume.pdf" download>here</a>.</download-content>
+            
+            <a href="#main-header">Back to Top</a>
+        </section>
+        <hr>
+        <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <h3 hidden>Fitbyte</h3>
+                <details>
+                    <summary>FitByte</summary>
+                    <p>A React-based app for tracking workouts enabling users to track and customize exercise
+                        routines. Designed and implemented dynamic input forms using custom hooks to manage
+                        specific exercise details, such as reps, sets, cardio options, and weights. Refactored codebase to
+                        enhance usability and scalability. Collaborated with a team to prioritize user-centered design
+                        principles, improving overall UI/UX.
+                    </p>
+                </details>
+            </article>
+            <br>
+            <a href="#main-header">Back to Top</a>
+        </section>
+
+        <hr>
+
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>In my free time, I enjoy a variety of activities that help me <span style="color: orange; font-family: cursive;">relax</span> and <span style="color: yellow; font-family: cursive;">recharge</span> Some of my hobbies include:
+            </p>
+            <ul>
+                <li>Reading books</li>
+                <li>Hiking</li>
+                <li>Practicing guitar</li>
+                <li>Learning about space</li>
+                <li>and so much more I want to do!!</li>
+            </ul>
+            <a href="#main-header">Back to Top</a>  
+        </section>
+
+        <hr>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="/submit-contact" method="post">
+                <fieldset>
+                    <legend>Contact Form</legend>
+                    <input-group>
+                        <label for="user-name">Name:</label>
+                        <input type="text" id="user-name" name="contact-form" required>
+                    </input-group> 
+                    <input-group> 
+                        <label for="user-email">Email:</label>
+                        <input type="email" id ="user-email" name="contact-form" required>
+                    </input-group> 
+                    <input-group> 
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="contact-form" rows="4"> </textarea>
+                    </input-group> 
+                    <button type="submit">Send</button>
+                </fieldset>
+            </form>
+            <br>
+            <a href="#main-header">Back to Top</a>
+        </section>
+
+        <hr>
+
+        <section id="experiment">
+            <h2>Experiment</h2>
+
+            <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Windows).</p>
+
+            <p>Press <kbd>Cmd</kbd> + <kbd>C</kbd> to copy text (Mac OS).</p> 
+
+            <p>The HTML <code>button</code> tag defines a clickable button.</p>
+
+            <p>The CSS <code>background-color</code> property defines the background color of an element.</p> 
+
+            <p><dfn><abbr title="Hyper Text Markup Language">HTML</abbr></dfn> is the standard markup language for creating web pages.</p> 
+
+            <dialog >This is an open dialog</dialog>
+
+            
+            <template id="myTemplate">
+                <h1>Template Content</h1>
+                <div class="template-content">
+                    <h2>Welcome to my website!</h2>
+                </div>
+            </template>
+
+            <hello-world></hello-world>
+
+            <script>
+                // Define the custom element
+                class HelloWorld extends HTMLElement {
+                    // Constructor runs when the element is created
+                    constructor() {
+                        super();
+                        // Log a message to the console
+                        console.log("Hello world!");
+                    }
+                }
+
+                // Register the custom element
+                customElements.define('hello-world', HelloWorld);
+            </script>
+
+            <canvas id="heartCanvas"></canvas>
+
+            <noscript>
+                <p>JavaScript is disabled in your browser. The heart cannot be displayed. Please enable JavaScript to view it.</p>
+             </noscript>
+
+            <script>
+                const canvas = document.getElementById("heartCanvas");
+                const ctx = canvas.getContext("2d");
+          
+                canvas.width = 300;
+                canvas.height = 300;
+                function drawHeart(x, y, size) {
+                      ctx.beginPath();
+                      ctx.fillStyle = "pink"; 
+                      ctx.moveTo(x, y);
+                      
+                      for (let i = 0; i < Math.PI * 2; i += 0.05) {
+                          let px = x + size * 16 * Math.pow(Math.sin(i), 3);
+                          let py = y - size * (13 * Math.cos(i) - 5 * Math.cos(2 * i) - 2 * Math.cos(3 * i) - Math.cos(4 * i));
+                          ctx.lineTo(px, py);
+                      }
+                      
+                      ctx.fill();
+                      ctx.closePath();
+                  }
+          
+                  drawHeart(canvas.width / 2, canvas.height / 2 + 20, 0.8);
+            </script>
+
+
+            <iframe src="https://www.netflix.com" width="600" height="400" title="Netflix link"></iframe>
+
+            <audio controls>
+                <source src="assets/i-know-the-astroids-neil-degrasse-tyson-astroids-science-i-see-101soundboards.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+
+            <video width="640" height="360" controls>
+                <source src="assets/videoplayback.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+              
+                  
+        </section>
+              
+
+    </main>
+
+    <footer>
+
+        <section class="subscribe">
+            <form action="/submit_email-sub" method="post">
+                <h2>Subscribe to Get Updates!</h2>
+                  <label for="email-sub">Enter your email:</label>
+                  <input type="text" id="email-sub" name="email-sub" required>
+                  <button type="submit">Submit</button> 
+            </form>
+        </section>
+             
+        <blockquote cite="https://study.com/learn/lesson/neil-degrasse-tyson-quotes.html">"We are all connected; to each other, biologically. To the earth, chemically. To the rest of the universe atomically" <wbr>- Neil deGrasse Tyson</wbr></blockquote>       
+
+    </footer>
+</body>
+</html>
