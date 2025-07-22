@@ -158,16 +158,15 @@ section#projects summary{
 }
 
 section#contact form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    padding: auto;
+    display: block;
+    width: 40dvw;
+    margin: 0 auto;
 }
 
 section#contact input-group {
     display: flex;
     flex-direction: column;
+    padding: 0.5rem;
     gap: 5px;
 } 
 
@@ -199,10 +198,9 @@ blockquote, wbr{
         grid-template-columns: repeat(3, auto);
     }
   
-    section#about-me input-group {
-        display: block;
-        gap: 5px; 
-    } 
+    section#contact form {
+        width: 60dvw;
+    }
 }
 
 @media screen and (max-width: 690px) {
@@ -247,6 +245,10 @@ blockquote, wbr{
         justify-content: center;
         gap: 5px;
         margin-bottom: 3px;
+    }
+
+    section#contact form{
+        width: 70dvw;
     }
 
     footer section.subscribe form {
