@@ -209,21 +209,24 @@ which has helped shape the way I approach challenges and opportunities.
         <hr>
         <section id="contact">
             <h2>Contact</h2>
-            <form action="/submit-contact" method="post">
+            <form action="https://httpbin.org/post" method="post">
                 <fieldset>
                     <legend>Contact Form</legend>
                     <input-group>
                         <label for="user-name">Name:</label>
-                        <input type="text" id="user-name" name="contact-form" required>
+                        <input type="text" id="user-name" name="user-name" required>
                     </input-group> 
                     <input-group> 
                         <label for="user-email">Email:</label>
-                        <input type="email" id ="user-email" name="contact-form" required>
+                        <input type="email" id ="user-email" name="user-email" required>
                     </input-group> 
                     <input-group> 
                         <label for="message">Message:</label>
-                        <textarea id="message" name="contact-form" rows="4"> </textarea>
+                        <textarea id="message" name="user-message" rows="4"> </textarea>
                     </input-group> 
+
+                    <!-- Hidden Field -->
+                    <input type="hidden" name="possible_bot" value="true">
                     <button type="submit">Send</button>
                 </fieldset>
             </form>
