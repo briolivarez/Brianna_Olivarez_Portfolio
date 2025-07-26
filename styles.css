@@ -161,6 +161,11 @@ section#contact form{
     display: block;
     width: 40dvw;
     margin: 0 auto;
+
+    span#req-label {
+        color: red;
+    }
+
 }
 
 section#contact input-group {
