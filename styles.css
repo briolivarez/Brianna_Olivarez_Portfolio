@@ -175,6 +175,10 @@ section#contact input-group {
     gap: 5px;
 } 
 
+textarea:user-invalid, input:user-invalid {
+    border: 2px solid red;
+}
+
 section#experiment iframe, video, canvas{
     width: 80dvw; 
     height: 45dvh;

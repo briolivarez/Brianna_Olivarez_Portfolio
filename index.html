@@ -209,27 +209,36 @@ which has helped shape the way I approach challenges and opportunities.
         <hr>
         <section id="contact">
             <h2>Contact</h2>
-            <form action="https://httpbin.org/post" method="post">
+            <form id="contact" action="https://httpbin.org/post" method="post" novalidate="">
                 <fieldset>
                     <legend>Contact Form</legend>
-                    <input-group>
-                        <label for="user-name">Name:<span id="req-label">*</span></label>
-                        <input type="text" id="user-name" name="user-name"  pattern="/A-Za-z0-9\s/+" required>
-                    </input-group> 
-                    <input-group> 
-                        <label for="user-email">Email:<span id="req-label">*</span></label>
-                        <input type="email" id ="user-email" name="user-email" required>
-                    </input-group> 
-                    <input-group> 
-                        <label for="message">Message:<span id="req-label">*</span></label>
-                        <textarea id="message" name="user-message" maxlength="200" required></textarea>
-                    </input-group> 
 
                     <!-- Hidden Field -->
                     <input type="hidden" name="possible_bot" value="true">
+                    <!-- Hidden input for form error tracking -->
+                    <input type="hidden" name="form-errors" id="form-errors" value="[]">
+
+                    <input-group>
+                        <label for="name">Name:<span id="req-label">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                        <output class="error-msg" id="name-error"></output>
+                    </input-group> 
+                    <input-group> 
+                        <label for="email">Email:<span id="req-label">*</span></label>
+                        <input type="email" id ="email" name="email" required>
+                        <output class="error-msg" id="email-error"></output>
+                    </input-group> 
+                    <input-group> 
+                        <label for="message">Message:<span id="req-label">*</span></label>
+                        <textarea id="message" name="message" maxlength="200" required></textarea>
+                        <output class="info-msg" id="info-msg">200 characters remaining</output>
+                        <output class="error-msg" id="message-error"></output>
+                    </input-group> 
+
                     <button type="submit">Send</button>
                 </fieldset>
             </form>
+            <script src="validator.js"></script>
             <br>
             <a href="#main-header">Back to Top</a>
         </section>
