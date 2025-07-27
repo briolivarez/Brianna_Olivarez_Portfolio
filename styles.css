@@ -1,6 +1,7 @@
 :root {
     --bg-color: #07080e;
     --text-color: #eeeef4;
+    --table-color: grey;
 }
 
 @font-face {
@@ -22,6 +23,53 @@
     to {
       transform: scaleX(1);
     }
+}
+
+.light-mode{
+    --bg-color: white;
+    --text-color: #000106;
+    --table-color: rgb(248, 147, 213);
+}
+
+/* Hide the checkbox */
+.toggle-switch input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+  position: absolute;
+  display: inline-block;
+  top: 0.625rem;
+  right: 1.25rem;
+  width: 50px;
+  height: 24px;
+  background-color: var(--table-color);
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+
+.toggle-switch input:checked + .slider {
+  background-color: var(--text-color);
+}
+
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
 section#resume picture{
@@ -86,7 +134,7 @@ nav ul {
     li {
         margin: 0 1rem;
         font-size: 1.5rem;
-        border: 1px solid white;
+        border: 1px solid var(--text-color, white);
         border-radius: 5px;
         padding: 0.5rem;
         transition: background-color 0.3s ease;
@@ -127,7 +175,7 @@ a[href="#main-header"] {
 }
 
 section#resume table#relevant-coursework {
-    background-color: grey;
+    background-color: var(--table-color, grey);
     color: black;
     width: 100 dvw;
     max-width: fit-content;
@@ -142,7 +190,7 @@ section#resume table#relevant-coursework {
    th,td {
         padding: 10px;
         text-align: left;
-        border: 1px solid white;
+        border: 1px solid var(--text-color, white);
     }
 }
 
@@ -161,7 +209,7 @@ section#contact form{
     display: block;
     width: 40dvw;
     margin: 0 auto;
-
+    background-color: ;
     span#req-label {
         color: red;
     }
@@ -235,7 +283,7 @@ blockquote, wbr{
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center horizontally */
         text-align: center; /* Ensures text inside is also centered */
-        width: 100%;
+         width: 100%;
 
         #profile-picture img {
             border-radius: 50%; /* Makes the profile picture circular */
